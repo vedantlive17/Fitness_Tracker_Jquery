@@ -1,0 +1,153 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(0, 0, 0);
+  max-width: 100%;
+
+}
+
+.banner {
+  background: rgb(0, 0, 0);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner__video {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  -webkit-animation-duration: 7s;
+  animation-duration: 7s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {opacity: 40;}
+  100% {opacity: 1;}
+  }
+  @keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+  } 
+
+  .banner__button {
+    -webkit-animation: slide-down 12s forwards;
+    animation: slide-down 12s forwards;
+  }
+  
+
+@-webkit-keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+#vbox {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+
+
+nav {
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 50px;
+  /* background-color: red; */
+}
+
+nav ul {
+  list-style: none;
+  position: fixed;
+  bottom: 60px;
+  left: 20%;
+  padding: 20px;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  font-size: 22px;
+  letter-spacing: 7px;
+  font-family: system-ui, sans-serif;
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #e63946;
+  font-weight: 600;
+padding: 15px 70px 15px 70px;
+  
+}
+
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all 0.7s;
+}
+
+
+.home-link {
+  color: #e63946;
+}
+
+/* stroke */
+
+.fill {
+  --color: #3a85ff;
+  --hover: #e5e5e54d;
+}
+
+.fill:hover,
+.fill:focus {
+  box-shadow: inset 0 0 0 2em var(--hover);
+}
+
+button {
+  color: var(--color);
+  transition: 0.25s;
+}
+
+button:hover,
+button:focus,
+button:active {
+  border-color: var(--hover);
+  color: #fff;
+  cursor: pointer;
+}
+
+button {
+  background: none;
+  border: 2px solid;
+  font: inherit;
+  line-height: 1;
+ margin-right: 90px;
+}

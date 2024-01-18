@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Khula', sans-serif;
+}
+
+body {
+    background-color: #f0efeb;
+}
+
+.title {
+    padding: 20px;
+    text-align: center;
+}
+
+.head hr {
+    width: 1400px;
+    margin: auto;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 10px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.products {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item {
+
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.item img {
+    width: 200px;
+    height: 200px;
+
+}
+
+button {
+    background: none;
+    border: 2px solid;
+    font: inherit;
+    line-height: 1;
+    margin: 0.5em;
+    padding: 1em 2em;
+}
+
+
+button {
+    color: var(--color);
+    transition: 0.25s;
+}
+
+button:hover {
+    border-color: var(--hover);
+    color: #fff;
+}
+
+
+.fill:hover {
+    box-shadow: inset 0 0 0 2em var(--hover);
+}
+
+.fill {
+    --color: #ff7f82;
+    --hover: #ffdc7f;
+}
+
+
+.cart-container {
+    max-width: 1000px;
+    background: #8ecae6;
+    border-radius: 5px;
+    padding: 70px;
+    margin: auto;
+    margin-bottom: 50px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.cart-container hr {
+    width: 200px;
+    border: 1px solid rgb(90, 90, 90);
+}
+
+.cart-container button {
+    border: 1px solid;
+    font: inherit;
+    line-height: 0.1;
+    margin: 0.5em;
+    padding: 10px;
+    color: white;
+    transition: 0.25s;
+    margin-left: 30px;
+    border: none;
+}
+
+.cart-container button:hover {
+    color: red;
+    font-size: 25px;
+    transition: 0.5s;
+}
+
+#cart {
+    font-size: 20px;
+    line-height: 50px;
+
+}
+
+#cart h1 {
+    font-size: 30px;
+    letter-spacing: 2.5px;
+    font-weight: 900;
+
+}
+
+#total {
+    border: 1px solid black;
+    padding: 15px;
+    border-radius: 50px;
+    background-color: black;
+    font-size: 20px;
+    float: right;
+    color: white;
+    text-align: center;
+    letter-spacing: 3.5px;
+}
+
+.sub-total {
+    color: red;
+    background-color: black;
+}
+
+
+@media screen and (max-width: 1200px) {
+    .row {
+        flex: 50%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .products {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,93 @@
+nav img {
+    width: 100px;
+    /* height: 100px; */
+}
+
+nav a {
+    font-family: "Porsche";
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: 0.8vw;
+}
+
+.carousel img {
+    margin-top: 30px;
+    max-height: 800px;
+    object-fit: cover;
+}
+
+.card-title {
+    margin-top: -30px;
+    font-weight: 900;
+}
+
+a.btn {
+    margin-top: 99px;
+    letter-spacing: 0.2vw;
+    font-weight: 600;
+    opacity: 0.9;
+}
+
+.c1 {
+    width: 400px;
+    height: 200px;
+    background-image: url(./img/718.jpg);
+    /* background-size: 300px; */
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+}
+
+.c2 {
+    width: 400px;
+    height: 200px;
+    background-image: url(./img/911.jpg);
+    /* background-size: 300px; */
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+}
+
+.c3 {
+    width: 400px;
+    height: 200px;
+    background-image: url(./img/taycan.jpg);
+    /* background-size: 300px; */
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+}
+
+.c4 {
+    width: 400px;
+    height: 200px;
+    background-image: url(./img/panamera.jpg);
+    /* background-size: 300px; */
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+}
+
+.c5 {
+    width: 400px;
+    height: 200px;
+    background-image: url(./img/macan.jpg);
+    /* background-size: 300px; */
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+}
+
+.c6 {
+    width: 400px;
+    height: 200px;
+    background-image: url(./img/cayenne.jpg);
+    /* background-size: 300px; */
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+}
+
+.gal {
+    max-width: 1200px;
+
+}
+
+.navgal img {
+    max-width: 150px;
+    max-height: 100px;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@800&family=Khula:wght@700&family=Lato:wght@900&family=M+PLUS+1p:wght@800&family=Roboto:wght@900&display=swap"
+        rel="stylesheet" />
+    <title>Javascript Shopping cart</title>
+</head>
+
+<body >
+    <h1 class="title">My cart</h1>
+
+    <div class="head">
+        <hr />
+    </div>
+
+    <div class="container">
+        <div class="products">
+            <div class="row">
+                <div class="item">
+                    <h3>google home</h3>
+                    <img src="./img/google home.png" />
+                    <p>$84.99</p>
+                    <button class="fill" onclick="addToCart('google home', 1)">
+                        Add To Cart
+                    </button>
+                </div>
+                <div class="item">
+                    <h3>watch</h3>
+                    <img src="./img/watch.jpg" />
+                    <p>$150</p>
+                    <button class="fill" onclick="addToCart('watch', 1)">
+                        Add To Cart
+                    </button>
+                </div>
+                <div class="item">
+                    <h3>airpods</h3>
+                    <img src="./img/airpods.jpg" />
+                    <p>$120</p>
+                    <button class="fill" onclick="addToCart('airpods', 1)">
+                        Add To Cart
+                    </button>
+                </div>
+                <div class="item">
+                    <h3>shoes</h3>
+                    <img src="./img/Shoes.jpg" />
+                    <p>$90</p>
+                    <button class="fill" onclick="addToCart('shoes', 1)">
+                        Add To Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="cart-container">
+        <div id="cart"></div>
+
+        <div id="total"></div>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>
