@@ -1,0 +1,58 @@
+.h-text {
+    text-align: center;
+}
+
+.viewport {
+    width: 393px;
+    height: 680px;
+    border-radius: 25px;
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.1);
+    height: 680px;
+    margin: 40px auto;
+}
+
+@media (max-width: 540px) {
+    .viewport {
+        width: 100%;
+        height: 100vh;
+        border-radius: 0px;
+        margin: 0;
+        box-shadow: none;
+    }
+}
+
+.viewport #app {
+    padding-top: 10px;
+    height: 100%;
+    position: relative;
+}
+
+.burger img {
+    padding-left: 20px;
+    margin-top: 12px;
+}
+
+.b-icons-container {
+    padding: 20px;
+}
+
+.b-icons {
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    box-shadow: rgba(255, 255, 255, 0) 0px 0px 0px 2px, rgba(6, 24, 44, 0.322) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.b-icons:hover {
+    cursor: pointer;
+}
+
+.b-icons img {
+    width: 100%;
+    height: 100%;
+}
