@@ -1,13 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap');
+
+body {
+    font-family: "Inter";
+}
+
 .h-text {
     text-align: center;
 }
 
 .viewport {
     width: 393px;
-    height: 680px;
+    height: 710px;
     border-radius: 25px;
     box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.1);
-    height: 680px;
     margin: 40px auto;
 }
 
@@ -27,14 +32,123 @@
     position: relative;
 }
 
+.burger {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: center;
+}
+
+.date-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+
+.date-container .is-today {
+    font-weight: bold;
+    color: black;
+    font-size: 22px;
+}
+
+
+.p-date {
+    font-size: 15px;
+    color: gray;
+    margin-bottom: 10px;
+    margin-left: 30px;
+}
+
+.f-date {
+    font-size: 15px;
+    color: gray;
+    margin-bottom: 10px;
+    margin-left: 30px;
+}
+
+.date {
+    font-weight: 500;
+    margin-bottom: 10px;
+    font-size: 22px;
+    margin-left: 30px;
+}
+
 .burger img {
     padding-left: 20px;
     margin-top: 12px;
 }
 
+.burger img:hover {
+    cursor: pointer;
+}
+
 .b-icons-container {
     padding: 20px;
 }
+
+.field-container {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    width: 250px;
+    height: 25px;
+    margin-top: 10px;
+    margin-left: 25px;
+    margin-bottom: 20px;
+}
+
+.icons-container {
+    position: absolute;
+    top: 11px;
+    right: -25px;
+    width: 35px;
+    height: 35px;
+    overflow: hidden;
+}
+
+.field {
+    border: 0;
+    width: 100%;
+    height: 100%;
+    padding: 10px 20px;
+    background: white;
+    border-radius: 3px;
+    box-shadow: 0px 8px 15px rgba(75, 72, 72, 0.1);
+    transition: all 0.4s ease;
+}
+
+.field:focus {
+    outline: none;
+    box-shadow: 0px 9px 20px rgba(75, 72, 72, 0.3);
+}
+
+.field:focus+.icons-container .icon-close {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.field:focus+.icons-container .icon-search {
+    opacity: 0;
+    transform: translateX(200%);
+    transition: all 0.4s ease;
+}
+
+.icon-search {
+    background-image: url('./images/search.png');
+    background-size: cover;
+    width: 25px;
+    height: 25px;
+    left: 30%;
+    position: absolute;
+    cursor: pointer;
+}
+
+
 
 .b-icons {
     margin: 10px;
@@ -55,4 +169,176 @@
 .b-icons img {
     width: 100%;
     height: 100%;
+}
+
+.card {
+    background-color: rgb(255, 255, 255);
+    width: 200px;
+    min-height: 200px;
+    text-align: center;
+    margin: auto;
+    border-radius: 25px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+    margin-bottom: 20px;
+}
+
+.card h1 {
+    padding: 10px;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+    margin-top: 10px;
+}
+
+.card-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+}
+
+.card-body button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin: 10px;
+    border: none;
+    padding: 0;
+}
+
+.minus-btn:hover {
+    cursor: pointer;
+    background-color: rgb(255, 47, 47);
+}
+
+.plus-btn:hover {
+    cursor: pointer;
+    background-color: greenyellow;
+}
+
+.card-header img {
+    margin: auto;
+    background-color: transparent;
+    width: 58px;
+    height: 58px;
+    padding: 10px;
+}
+
+.card-body img {
+    width: 32px;
+    height: 32px;
+    background-color: transparent;
+}
+
+.second-card {
+    position: relative;
+    width: 300px;
+    padding: 20px;
+    background-color: #6a5acd;
+    color: white;
+    margin: auto;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.second-card p {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.calories-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.calorie-block {
+    text-align: center;
+}
+
+.calorie-value {
+    display: block;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.calorie-label {
+    font-size: 14px;
+}
+
+.footer {
+    width: 360px;
+    height: 55px;
+    color: white;
+    margin: auto;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.footer img {
+    width: 38px;
+    height: 38px;
+    padding: 10px;
+    margin: auto;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.footer img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+}
+
+.active-icon {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 50%;
+    background-color: #6a5acd;
+}
+
+@keyframes nudge {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(-10px); }
+    100% { transform: translateX(0); }
+}
+
+@keyframes swipeLeft {
+    0% { transform: translateX(0); opacity: 1; }
+    100% { transform: translateX(-100px); opacity: 0; }
+}
+
+.nudge-animation {
+    animation: nudge 2s ease-in-out;
+}
+
+@keyframes swipeLeft {
+    0% { transform: translateX(0); opacity: 1; }
+    100% { transform: translateX(-100px); opacity: 0; }
+}
+
+.swipe-left-indicator {
+    animation: swipeLeft 2s ease-in-out forwards;
+}
+
+.swipe-left-indicator {
+    display: block;
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 32px;
+    height: 32px;
+    background: url('./images/left.png') no-repeat center center;
+    background-size: contain;
+    z-index: 10;
 }

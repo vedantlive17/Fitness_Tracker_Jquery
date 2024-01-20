@@ -1,66 +1,612 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simple Fitness Tracker</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.3.7/slick.css"/>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.3.7/slick.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css" />
-  </head>
-  <body>
-    <h1 class="h-text">Fitness Tracker</h1>
-    <div class="viewport">
-      <div id="app">
-        <div class="burger">
-          <img src="./images/menu.png" />
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simple Fitness Tracker</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.3.7/slick.css" />
+  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.3.7/slick.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+  <h1 class="h-text">Fitness Tracker</h1>
+  <div class="viewport">
+    <div id="app">
+      <div class="burger">
+        <img src="./images/menu.png" />
+
+        <fieldset class="field-container">
+          <input type="text" placeholder="Search..." class="field" />
+          <div class="icons-container">
+            <div class="icon-search"></div>
+          </div>
+        </fieldset>
+      </div>
+      <div class="date-container"></div>
+      <div class="b-icons-container slick">
+        <div class="b-icons">
+          <img id="abs-icon" src="./images/abs.png" />
         </div>
-        <div class="b-icons-container slick">
-          <div class="b-icons">
-            <img src="./images/abs.png" />
-          </div>
-          <div class="b-icons">
-            <img src="./images/chest.png" />
-          </div>
-          <div class="b-icons">
-            <img src="./images/calves.png" />
-          </div>
-          <div class="b-icons">
-            <img src="./images/hamstring.png" />
-          </div>
-          <div class="b-icons">
-            <img src="./images/shoulders.png" />
-          </div>
-          <div class="b-icons">
-            <img src="./images/pelcs.png" />
-          </div>
-          <div class="b-icons">
-            <img src="./images/tricep.png" />
-          </div>
-          <div class="b-icons">
-            <img src="./images/back.png" />
+        <div class="b-icons">
+          <img id="chest-icon" src="./images/chest.png" />
+        </div>
+        <div class="b-icons">
+          <img id="calves-icon" src="./images/calves.png" />
+        </div>
+        <div class="b-icons">
+          <img id="hamstring-icon" src="./images/hamstring.png" />
+        </div>
+        <div class="b-icons">
+          <img id="shoulder-icon" src="./images/shoulders.png" />
+        </div>
+        <div class="b-icons">
+          <img id="pelcs-icon" src="./images/pelcs.png" />
+        </div>
+        <div class="b-icons">
+          <img id="tricep-icon" src="./images/tricep.png" />
+        </div>
+        <div class="b-icons">
+          <img id="back-icon" src="./images/back.png" />
+        </div>
+      </div>
+
+      <div class="card-container slick-card abs-card">
+        <div>
+          <div class="card">
+            <div class="card-header">
+              <h1>Plank</h1>
+              <img src="./images/plank.png" />
+            </div>
+            <div class="card-body">
+              <button class="minus-btn">
+                 <button class="minus-btn">
+    <img src="./images/minus.png" />
+  </button>
+              </button>
+              <h1 class="rep-count">0</h1>
+              <button class="plus-btn">
+                <button class="plus-btn">
+    <img src="./images/plus.png" />
+  </button>
+              </button>
+            </div>
           </div>
         </div>
-        <form id="trackerForm">
-          <input
-            type="text"
-            id="exerciseName"
-            placeholder="Exercise Name"
-            required
-          />
-          <input
-            type="number"
-            id="repsCount"
-            placeholder="Number of Reps"
-            required
-          />
-          <button type="submit">Add Exercise</button>
-        </form>
-        <h2>Exercise Log</h2>
-        <ul id="exerciseLog"></ul>
+        <div>
+          <div class="card">
+            <div class="card-header">
+              <h1>Leg-raise</h1>
+              <img src="./images/leg-raise.png" />
+            </div>
+            <div class="card-body">
+              <button class="minus-btn">
+                 <button class="minus-btn">
+    <img src="./images/minus.png" />
+  </button>
+              </button>
+              <h1 class="rep-count">0</h1>
+              <button class="plus-btn">
+                <button class="plus-btn">
+    <img src="./images/plus.png" />
+  </button>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="card">
+            <div class="card-header">
+              <h1>Running</h1>
+              <img src="./images/runner.png" />
+            </div>
+            <div class="card-body">
+              <button class="minus-btn">
+                 <button class="minus-btn">
+    <img src="./images/minus.png" />
+  </button>
+              </button>
+              <h1 class="rep-count">0</h1>
+              <button class="plus-btn">
+                <button class="plus-btn">
+    <img src="./images/plus.png" />
+  </button>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-container slick-card chest-card">
+        <div>
+          <div class="card">
+            <div class="card-header">
+              <h1>Chest</h1>
+              <img src="./images/chest-1.png" />
+            </div>
+            <div class="card-body">
+              <button class="minus-btn">
+                 <button class="minus-btn">
+    <img src="./images/minus.png" />
+  </button>
+              </button>
+              <h1 class="rep-count">0</h1>
+              <button class="plus-btn">
+                <button class="plus-btn">
+    <img src="./images/plus.png" />
+  </button>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="card">
+            <div class="card-header">
+              <h1>Chest</h1>
+              <img src="./images/chest-2.png" />
+            </div>
+            <div class="card-body">
+              <button class="minus-btn">
+                 <button class="minus-btn">
+    <img src="./images/minus.png" />
+  </button>
+              </button>
+              <h1 class="rep-count">0</h1>
+              <button class="plus-btn">
+                <button class="plus-btn">
+    <img src="./images/plus.png" />
+  </button>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="card">
+            <div class="card-header">
+              <h1>Weights</h1>
+              <img src="./images/weights.png" />
+            </div>
+            <div class="card-body">
+              <button class="minus-btn">
+                 <button class="minus-btn">
+    <img src="./images/minus.png" />
+  </button>
+              </button>
+              <h1 class="rep-count">0</h1>
+              <button class="plus-btn">
+                <button class="plus-btn">
+    <img src="./images/plus.png" />
+  </button>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-container slick-card calves-card">
+        <div>
+          <div class="card">
+            <div class="card-header">
+              <h1>Plank</h1>
+              <img src="./images/plank.png" />
+            </div>
+            <div class="card-body">
+              <button class="minus-btn">
+                 <button class="minus-btn">
+    <img src="./images/minus.png" />
+  </button>
+              </button>
+              <h1 class="rep-count">0</h1>
+              <button class="plus-btn">
+                <button class="plus-btn">
+    <img src="./images/plus.png" />
+  </button>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="card">
+            <div class="card-header">
+              <h1>Pushups</h1>
+              <img src="./images/abs.png" />
+            </div>
+            <div class="card-body">
+              <button class="minus-btn">
+                 <button class="minus-btn">
+    <img src="./images/minus.png" />
+  </button>
+              </button>
+              <h1 class="rep-count">0</h1>
+              <button class="plus-btn">
+                <button class="plus-btn">
+    <img src="./images/plus.png" />
+  </button>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="card">
+            <div class="card-header">
+              <h1>Pushups</h1>
+              <img src="./images/plank.png" />
+            </div>
+            <div class="card-body">
+              <button class="minus-btn">
+                 <button class="minus-btn">
+    <img src="./images/minus.png" />
+  </button>
+              </button>
+              <h1 class="rep-count">0</h1>
+              <button class="plus-btn">
+                <button class="plus-btn">
+    <img src="./images/plus.png" />
+  </button>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="card-container slick-card hamstring-card">
+        <div>
+          <div class="card">
+            <div class="card-header">
+              <h1>Plank</h1>
+              <img src="./images/plank.png" />
+            </div>
+            <div class="card-body">
+              <button class="minus-btn">
+                 <button class="minus-btn">
+    <img src="./images/minus.png" />
+  </button>
+              </button>
+              <h1 class="rep-count">0</h1>
+              <button class="plus-btn">
+                <button class="plus-btn">
+    <img src="./images/plus.png" />
+  </button>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="card">
+            <div class="card-header">
+              <h1>Pushups</h1>
+              <img src="./images/abs.png" />
+            </div>
+            <div class="card-body">
+              <button class="minus-btn">
+                 <button class="minus-btn">
+    <img src="./images/minus.png" />
+  </button>
+              </button>
+              <h1 class="rep-count">0</h1>
+              <button class="plus-btn">
+                <button class="plus-btn">
+    <img src="./images/plus.png" />
+  </button>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="card">
+            <div class="card-header">
+              <h1>Pushups</h1>
+              <img src="./images/plank.png" />
+            </div>
+            <div class="card-body">
+              <button class="minus-btn">
+                 <button class="minus-btn">
+    <img src="./images/minus.png" />
+  </button>
+              </button>
+              <h1 class="rep-count">0</h1>
+              <button class="plus-btn">
+                <button class="plus-btn">
+    <img src="./images/plus.png" />
+  </button>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-container slick-card shoulder-card">
+        <div>
+          <div class="card">
+            <div class="card-header">
+              <h1>Plank</h1>
+              <img src="./images/plank.png" />
+            </div>
+            <div class="card-body">
+              <button class="minus-btn">
+                 <button class="minus-btn">
+    <img src="./images/minus.png" />
+  </button>
+              </button>
+              <h1 class="rep-count">0</h1>
+              <button class="plus-btn">
+                <button class="plus-btn">
+    <img src="./images/plus.png" />
+  </button>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="card">
+            <div class="card-header">
+              <h1>Pushups</h1>
+              <img src="./images/abs.png" />
+            </div>
+            <div class="card-body">
+              <button class="minus-btn">
+                 <button class="minus-btn">
+    <img src="./images/minus.png" />
+  </button>
+              </button>
+              <h1 class="rep-count">0</h1>
+              <button class="plus-btn">
+                <button class="plus-btn">
+    <img src="./images/plus.png" />
+  </button>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="card">
+            <div class="card-header">
+              <h1>Pushups</h1>
+              <img src="./images/plank.png" />
+            </div>
+            <div class="card-body">
+              <button class="minus-btn">
+                 <button class="minus-btn">
+    <img src="./images/minus.png" />
+  </button>
+              </button>
+              <h1 class="rep-count">0</h1>
+              <button class="plus-btn">
+                <button class="plus-btn">
+    <img src="./images/plus.png" />
+  </button>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-container slick-card pelcs-card">
+        <div>
+          <div class="card">
+            <div class="card-header">
+              <h1>Plank</h1>
+              <img src="./images/plank.png" />
+            </div>
+            <div class="card-body">
+              <button class="minus-btn">
+                 <button class="minus-btn">
+    <img src="./images/minus.png" />
+  </button>
+              </button>
+              <h1 class="rep-count">0</h1>
+              <button class="plus-btn">
+                <button class="plus-btn">
+    <img src="./images/plus.png" />
+  </button>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="card">
+            <div class="card-header">
+              <h1>Pushups</h1>
+              <img src="./images/abs.png" />
+            </div>
+            <div class="card-body">
+              <button class="minus-btn">
+                 <button class="minus-btn">
+    <img src="./images/minus.png" />
+  </button>
+              </button>
+              <h1 class="rep-count">0</h1>
+              <button class="plus-btn">
+                <button class="plus-btn">
+    <img src="./images/plus.png" />
+  </button>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="card">
+            <div class="card-header">
+              <h1>Pushups</h1>
+              <img src="./images/plank.png" />
+            </div>
+            <div class="card-body">
+              <button class="minus-btn">
+                 <button class="minus-btn">
+    <img src="./images/minus.png" />
+  </button>
+              </button>
+              <h1 class="rep-count">0</h1>
+              <button class="plus-btn">
+                <button class="plus-btn">
+    <img src="./images/plus.png" />
+  </button>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="card-container slick-card tricep-card">
+        <div>
+          <div class="card">
+            <div class="card-header">
+              <h1>Plank</h1>
+              <img src="./images/plank.png" />
+            </div>
+            <div class="card-body">
+              <button class="minus-btn">
+                 <button class="minus-btn">
+    <img src="./images/minus.png" />
+  </button>
+              </button>
+              <h1 class="rep-count">0</h1>
+              <button class="plus-btn">
+                <button class="plus-btn">
+    <img src="./images/plus.png" />
+  </button>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="card">
+            <div class="card-header">
+              <h1>Pushups</h1>
+              <img src="./images/abs.png" />
+            </div>
+            <div class="card-body">
+              <button class="minus-btn">
+                 <button class="minus-btn">
+    <img src="./images/minus.png" />
+  </button>
+              </button>
+              <h1 class="rep-count">0</h1>
+              <button class="plus-btn">
+                <button class="plus-btn">
+    <img src="./images/plus.png" />
+  </button>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="card">
+            <div class="card-header">
+              <h1>Pushups</h1>
+              <img src="./images/plank.png" />
+            </div>
+            <div class="card-body">
+              <button class="minus-btn">
+                 <button class="minus-btn">
+    <img src="./images/minus.png" />
+  </button>
+              </button>
+              <h1 class="rep-count">0</h1>
+              <button class="plus-btn">
+                <button class="plus-btn">
+    <img src="./images/plus.png" />
+  </button>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-container slick-card back-card">
+        <div>
+          <div class="card">
+            <div class="card-header">
+              <h1>Plank</h1>
+              <img src="./images/plank.png" />
+            </div>
+            <div class="card-body">
+              <button class="minus-btn">
+                 <button class="minus-btn">
+    <img src="./images/minus.png" />
+  </button>
+              </button>
+              <h1 class="rep-count">0</h1>
+              <button class="plus-btn">
+                <button class="plus-btn">
+    <img src="./images/plus.png" />
+  </button>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="card">
+            <div class="card-header">
+              <h1>Pushups</h1>
+              <img src="./images/abs.png" />
+            </div>
+            <div class="card-body">
+              <button class="minus-btn">
+                 <button class="minus-btn">
+    <img src="./images/minus.png" />
+  </button>
+              </button>
+              <h1 class="rep-count">0</h1>
+              <button class="plus-btn">
+                <button class="plus-btn">
+    <img src="./images/plus.png" />
+  </button>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="card">
+            <div class="card-header">
+              <h1>Pushups</h1>
+              <img src="./images/plank.png" />
+            </div>
+            <div class="card-body">
+              <button class="minus-btn">
+                 <button class="minus-btn">
+    <img src="./images/minus.png" />
+  </button>
+              </button>
+              <h1 class="rep-count">0</h1>
+              <button class="plus-btn">
+                <button class="plus-btn">
+    <img src="./images/plus.png" />
+  </button>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="second-card">
+      <div class="swipe-left-indicator"></div>
+        <p>Active Calories</p>
+        <div class="calories-container">
+          <div class="calorie-block">
+            <span class="calorie-value today-calories">0</span>
+            <span class="calorie-label">Today</span>
+          </div>
+          <div class="calorie-block">
+            <span class="calorie-value week-calories">0</span>
+            <span class="calorie-label">This Week</span>
+          </div>
+          <div class="calorie-block">
+            <span class="calorie-value month-calories">10k</span>
+            <span class="calorie-label">This Month</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <img src="./images/health.png" />
+        <img src="./images/pulse.png" />
+        <img src="./images/graph.png" />
       </div>
     </div>
     <script src="index.js"></script>
-  </body>
+</body>
 </html>
