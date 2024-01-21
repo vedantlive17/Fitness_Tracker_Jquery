@@ -1,0 +1,24 @@
+.inputfield {
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    width: 100%;
+  }
+  
+  .inputfield:focus {
+    border-color: #1ea7fd;
+  }
+  
+  .inputfield-error {
+    border-color: red;
+  }
+  
+  .inputfield-disabled {
+    background-color: #eee;
+    color: #999;
+    cursor: not-allowed;
+  }
+  

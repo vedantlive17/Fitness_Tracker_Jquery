@@ -1,0 +1,87 @@
+/* navbar.css */
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .navbar a {
+    color: inherit;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  /* Navbar 1: Light theme with logo and shadow */
+  .navbar-1 {
+    background-color: #ffffff;
+    color: #333;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    width: 700px;
+  }
+
+  
+  /* Navbar 2: Dark theme with larger font and different layout */
+  .navbar-2 {
+    background-color: #333;
+    color: white;
+    width: 700px;
+  }
+  
+  .navbar-2 a {
+    font-size: 18px;
+  }
+
+  
+  .navbar-2 .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .navbar-2 .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .navbar-2 .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  /* Navbar 3: Gradient background with elegant logo */
+/* Existing styles ... */
+
+/* Modified Navbar 3: Vertical layout with logo on the left, menu on the right */
+.navbar-3 {
+    display: block; /* Change from flex to block for vertical layout */
+    background-color: #c68690;
+    color: white;
+    text-align: center; /* Center the content */
+  }
+  
+  .navbar-3 .navbar-logo {
+    font-size: 24px;
+    font-style: italic;
+    margin-bottom: 20px; /* Add some space below the logo */
+  }
+  
+  .navbar-3 a {
+    display: block; /* Stack links vertically */
+    font-size: 16px;
+    font-weight: bold;
+    margin: 5px 0; /* Spacing between menu items */
+  }
+  
+  /* Add a container to align logo and menu side by side */
+  .navbar-3-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  

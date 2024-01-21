@@ -1,0 +1,20 @@
+.datepicker {
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .datepicker:focus {
+    border-color: #1ea7fd;
+    outline: none;
+  }
+  
+  .datepicker-disabled {
+    background-color: #eee;
+    color: #999;
+    cursor: not-allowed;
+  }
+  

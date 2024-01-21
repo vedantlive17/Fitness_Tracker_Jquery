@@ -1,0 +1,48 @@
+/* Footer.css */
+.footer {
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    width: 700px;
+  }
+  
+  /* Footer 1: Basic style */
+  .footer-1 {
+    background-color: #07093b;
+    color: white;
+  }
+  
+  /* Footer 2: Dark theme */
+  .footer-2 {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+  }
+  
+  .footer-2 a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* Footer 3: Light theme with social media links */
+  .footer-3 {
+    background-color: #f2f2f2;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+  }
+  
+  .footer-3 .social-media-links {
+    display: flex;
+  }
+  
+  .footer-3 .social-media-links a {
+    margin: 0 10px;
+    color: #333;
+    text-decoration: none;
+  }
+  
